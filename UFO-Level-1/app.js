@@ -2,7 +2,7 @@
 var tableData = data;
 
 // YOUR CODE HERE!
-// Creating References to tbody, input and button
+// Table Stuff
 var $tbody = d3.select("tbody");
 var button = d3.select("#filter-btn");
 var inputFieldDate = d3.select("#datetime");
@@ -10,7 +10,7 @@ var inputFieldCity = d3.select("#city");
 var columns = ["date/time", "city", "state", "country", "shape", "comments"]
 
 
-// Inputing the data into the HTML
+// Putting the data into HTML
 var addData = (dataInput) => {
     dataInput.forEach(ufoSightings => {
         var row = $tbody.append("tr");
@@ -22,7 +22,7 @@ var addData = (dataInput) => {
 addData(tableData);
 
 
-// Creating an Event Listener for the Button
+// Button for date search
 
 button.on("click", () => {
 
@@ -44,7 +44,7 @@ button.on("click", () => {
         addData(filterDate);
     }
 
-    // add comment if not sightings
+    //Else statement
     
         else {
             $tbody.append("tr").append("td").text("Sorry about your luck...Keep er Moving...");
