@@ -19,12 +19,14 @@ var addData = (dataInput) => {
     });
 }
 
+
+
 addData(tableData);
 
 
 // Button for date search
 
-button.on("click", () => {
+button.on("click here", () => {
 
     d3.event.preventDefault();
     
